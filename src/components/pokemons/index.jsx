@@ -59,7 +59,7 @@ const PokeList = () => {
         <>
             <Main style={{ color: theme.color, backgroundImage: theme.background}}>
                 <Nav>
-                    <Link to={'/'}><Logo src="./src/images/pokemon-logo.svg.png" /></Link>
+                    <Link to={'/'}><Logo src="../../src/images/pokemon-logo.svg.png" /></Link>
                     <Ul>
                         <Li>
                             <Select
@@ -115,7 +115,7 @@ const PokeList = () => {
                     </Section>}
                 <Div>
                     <Pokeball>
-                        <PokeballImg src="./src/images/pokeball.png" alt="pokeball-image" onClick={() => loadPokemons()} />
+                        <PokeballImg src="../../src/images/pokeball.png" alt="pokeball-image" onClick={() => loadPokemons()} />
                     </Pokeball>
                 </Div>
             </ Main>
