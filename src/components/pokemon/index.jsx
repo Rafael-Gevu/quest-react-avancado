@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { ThemeTogglerButton } from "../theme-toggler-button/theme-toggler-button";
 import { getPokemonInfo } from "../../services/get-pokemon/get-pokemon";
 import { ThemeContext } from "../../context/theme-contexts";
-
+import pokemonLogo from "../../images/pokemonLogo.svg.png"
 
 const PokemonDetails = () => {
     const [pokemonInfo, setPokemonInfo] = useState({
@@ -51,7 +51,7 @@ const PokemonDetails = () => {
         <Card style={{ color: theme.color, background: theme.background}}>
 
             <Nav>
-                <Link to={'/'}><Logo src="../src/images/pokemon-logo.svg.png" /></Link>
+                <Link to={'/'}><Logo src={pokemonLogo} /></Link>
                 <ThemeTogglerButton />
             </Nav>
 

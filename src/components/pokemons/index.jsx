@@ -9,7 +9,8 @@ import { getPokemonList } from "../../services/get-pokemons/get-pokemons-list.js
 
 import { filterPokemonByType, getPokemonTypes } from "../../services/get-pokemons-filtered-by-type/get-pokemons-filtered-by-type.jsx";
 import { ThemeContext } from "../../context/theme-contexts.jsx";
-
+import pokemonLogo from "../../images/pokemonLogo.svg.png"
+import pokeball from "../../images/pokeball.png"
 const PokeList = () => {
     const [pokemonList, setPokemonList] = useState([])
     const [types, setTypes] = useState([])
@@ -31,7 +32,6 @@ const PokeList = () => {
     useEffect(() => {
         fetchList()
         filterPokemons()
-
     }, [offset])
 
     async function fetchList() {
@@ -51,15 +51,15 @@ const PokeList = () => {
         let urls = pokemonsFilter.map((result) => { return result.pokemon.url })
         urls.map((url) => { endpoints.push(url) })
         let response = await axios.all(endpoints.map(async (endpoint) => { return await axios.get(endpoint) }))
-        
         setFilteredPokemons([...response])
     }
 
     return (
+
         <>
             <Main style={{ color: theme.color, backgroundImage: theme.background}}>
                 <Nav>
-                    <Link to={'/'}><Logo src="../../src/images/pokemon-logo.svg.png" /></Link>
+                    <Link to={'/'}><Logo src={pokemonLogo} /></Link>
                     <Ul>
                         <Li>
                             <Select
@@ -106,16 +106,15 @@ const PokeList = () => {
                                             <img src={pokemon.data.sprites?.front_default} alt="pokemon-image"></img>
                                             <PokemonName>{pokemon?.data.name}</PokemonName>
                                         </Cards>
-
                                     </Link>
+
                                 </div>
                             )
-
                         })}
                     </Section>}
                 <Div>
                     <Pokeball>
-                        <PokeballImg src="../../src/images/pokeball.png" alt="pokeball-image" onClick={() => loadPokemons()} />
+                        <PokeballImg src={pokeball} alt="pokeball-image" onClick={() => loadPokemons()} />
                     </Pokeball>
                 </Div>
             </ Main>
@@ -133,8 +132,8 @@ const Nav = styled.nav`
     justify-content: space-between;
     padding: 2%;
     align-items: center;
-
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
     @media (max-width: 762px){
