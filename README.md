@@ -14,6 +14,10 @@
 ### O Site
 Um site que disponibiliza uma lista de cartas de Pokémon. Um guia que permite aos fãs aprender mais sobre os Pokémon e suas especificidades, além de introduzir o mundo Pokémon para aqueles que ainda não estão familiarizados com ele.
 
+### Screenshot
+<img src="./src/images/mobile-screenshot.png" alt= "mobile-screenshot">
+<img src="./src/images/desktop-screenshot.png" alt="desktop-screenshot">
+
 ### Funcionalidades
 Cada card pode ser clicado para acessar uma página com informações mais específicas e detalhadas sobre o Pokémon. Ao clicar na Poké Bola, o usuário pode carregar mais cartas de Pokémon (10 por clique). O usuário também pode filtrar os Pokémon por tipo usando a barra de seleção e alterar o tema de cores do site clicando no botão de alternância de tema.
 
@@ -29,6 +33,7 @@ A parte mais difícil foi filtrar os Pokémon por tipo. Inicialmente, tentei usa
 - HTML 5
 - CSS 3
 - React JS
+
 - JSON
 - API
 - Git/GitHub
